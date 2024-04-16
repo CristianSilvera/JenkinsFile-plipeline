@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+    environment {
+        INSTAGRAM_CRISTIAN= "@cristiansilveraa"
+    }
+    stages {
+        stage("Saludo 1") {
+            steps {
+                echo "Hola desde Saludo 1"
+            }
+        }
+        stage("Saludo 2"){
+            steps {
+                echo "Hola desde saludo 2, paso 1"
+                echo "Hola desde saludo 2, paso 2"
+            }
+        }
+        stage("Imprimir variable de entorno") {
+            steps {
+                echo "${env.INSTAGRAM_CRISTIAN}"
+                echo "${INSTAGRAM_CRISTIAN}"
+                echo "$INSTAGRAM_CRISTIAN"
+                
+                echo "**************************"
+                
+                sh "echo ${env.INSTAGRAM_CRISTIAN}"
+                sh "echo ${INSTAGRAM_CRISTIAN}"
+                sh "echo $INSTAGRAM_CRISTIAN"
+                
+                echo "==========================="
+                
+                echo "${env.INSTAGRAM}"
+                echo "${INSTAGRAM}"
+                echo "$INSTAGRAM"
+                
+                echo "==========================="
+                
+                sh "echo ${env.INSTAGRAM}"
+                sh "echo ${INSTAGRAM}"
+                sh "echo $INSTAGRAM"
+            }
+        }
+    }
+}
