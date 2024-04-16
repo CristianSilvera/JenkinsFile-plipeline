@@ -19,25 +19,21 @@ pipeline {
             steps {
                 echo "${env.INSTAGRAM_CRISTIAN}"
                 echo "${INSTAGRAM_CRISTIAN}"
-                echo "$INSTAGRAM_CRISTIAN"
                 
                 echo "**************************"
                 
                 sh "echo ${env.INSTAGRAM_CRISTIAN}"
                 sh "echo ${INSTAGRAM_CRISTIAN}"
-                sh "echo $INSTAGRAM_CRISTIAN"
                 
                 echo "==========================="
                 
                 echo "${env.INSTAGRAM}"
                 echo "${INSTAGRAM}"
-                echo "$INSTAGRAM"
                 
                 echo "==========================="
                 
                 sh "echo ${env.INSTAGRAM}"
                 sh "echo ${INSTAGRAM}"
-                sh "echo $INSTAGRAM"
             }
         }
     }
